@@ -3,9 +3,9 @@ import multiparty from 'multiparty';
 // import initMiddleware from '../../lib/init-middleware';
 
 cloudinary.v2.config({
-    cloud_name: 'serenaproject',
-    api_key: '854932294567319',
-    api_secret: 'LWXTwlOA2ncBbP5eB0DC4DpzZTg',
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
 export const config = {

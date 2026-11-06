@@ -12,7 +12,7 @@ const containerStyle = {
 const Map = ({ centerCoordinates, polygons, showOverlay, imageIndex }) => {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: 'AIzaSyCM1FHe1VOmGeMKIjg_4QZEU9NVNgH9T_0', // Replace with your actual API key
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
   });
 
   const [map, setMap] = React.useState(null);
